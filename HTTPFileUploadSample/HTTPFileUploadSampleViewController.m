@@ -7,43 +7,50 @@
 //
 
 #import "HTTPFileUploadSampleViewController.h"
+#import "HTTPFileUpload.h"
 
 @implementation HTTPFileUploadSampleViewController
 
 - (void)dealloc
 {
-    [super dealloc];
+  [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+  [super didReceiveMemoryWarning];
 }
 
 #pragma mark - View lifecycle
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
 }
-*/
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+  return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)postButtonClicked:(id)sender
+{
+  // Get image data.
+  UIImage *image1 = [UIImage imageNamed:@"Icon.png"];
+  UIImage *image2 = [UIImage imageNamed:@"Icon.jpg"];
+  
+  // File upload.
+  HTTPFileUpload *httpFileUpload = [[[HTTPFileUpload alloc] init] autorelease];
+  [httpFileUpload setPostString:@"1234" withPostName:@"password"];
+  [httpFileUpload setPostImage:image1 withPostName:@"data1" fileName:@"Icon.png"];
+  [httpFileUpload setPostImage:image2 withPostName:@"data2" fileName:@"Icon.jpeg"];
+  
+  NSString *result = [httpFileUpload postWithUri:@"http://photopost.jp/posts/create.json"];
+  
+  NSLog(@"%@", result);
+}
 @end

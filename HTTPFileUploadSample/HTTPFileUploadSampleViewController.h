@@ -12,4 +12,5 @@
     
 }
 
+- (IBAction)postButtonClicked:(id)sender;
 @end

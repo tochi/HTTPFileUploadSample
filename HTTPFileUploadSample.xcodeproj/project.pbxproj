@@ -16,6 +16,9 @@
 		D991D92A13A1D7F30045552F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D991D92813A1D7F30045552F /* MainWindow.xib */; };
 		D991D92D13A1D7F30045552F /* HTTPFileUploadSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D991D92C13A1D7F30045552F /* HTTPFileUploadSampleViewController.m */; };
 		D991D93013A1D7F30045552F /* HTTPFileUploadSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D991D92E13A1D7F30045552F /* HTTPFileUploadSampleViewController.xib */; };
+		D991D93813A1D8E20045552F /* HTTPFileUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = D991D93713A1D8E20045552F /* HTTPFileUpload.m */; };
+		D991D94B13A1DE460045552F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D991D94A13A1DE460045552F /* Icon.png */; };
+		D991D94D13A1DEEC0045552F /* Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D991D94C13A1DEEC0045552F /* Icon.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +26,20 @@
 		D991D91613A1D7F30045552F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D991D91813A1D7F30045552F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D991D91A13A1D7F30045552F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D991D91E13A1D7F30045552F /* HTTPFileUploadSample-Info.plist */ = {isa = PBXFileReference; path = "HTTPFileUploadSample-Info.plist"; sourceTree = "<group>"; };
+		D991D91E13A1D7F30045552F /* HTTPFileUploadSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HTTPFileUploadSample-Info.plist"; sourceTree = "<group>"; };
 		D991D92013A1D7F30045552F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D991D92213A1D7F30045552F /* HTTPFileUploadSample-Prefix.pch */ = {isa = PBXFileReference; path = "HTTPFileUploadSample-Prefix.pch"; sourceTree = "<group>"; };
+		D991D92213A1D7F30045552F /* HTTPFileUploadSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTTPFileUploadSample-Prefix.pch"; sourceTree = "<group>"; };
 		D991D92313A1D7F30045552F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D991D92513A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.h */ = {isa = PBXFileReference; path = HTTPFileUploadSampleAppDelegate.h; sourceTree = "<group>"; };
+		D991D92513A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPFileUploadSampleAppDelegate.h; sourceTree = "<group>"; };
 		D991D92613A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPFileUploadSampleAppDelegate.m; sourceTree = "<group>"; };
 		D991D92913A1D7F30045552F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		D991D92B13A1D7F30045552F /* HTTPFileUploadSampleViewController.h */ = {isa = PBXFileReference; path = HTTPFileUploadSampleViewController.h; sourceTree = "<group>"; };
+		D991D92B13A1D7F30045552F /* HTTPFileUploadSampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPFileUploadSampleViewController.h; sourceTree = "<group>"; };
 		D991D92C13A1D7F30045552F /* HTTPFileUploadSampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPFileUploadSampleViewController.m; sourceTree = "<group>"; };
 		D991D92F13A1D7F30045552F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HTTPFileUploadSampleViewController.xib; sourceTree = "<group>"; };
+		D991D93613A1D8E20045552F /* HTTPFileUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPFileUpload.h; sourceTree = "<group>"; };
+		D991D93713A1D8E20045552F /* HTTPFileUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPFileUpload.m; sourceTree = "<group>"; };
+		D991D94A13A1DE460045552F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D991D94C13A1DEEC0045552F /* Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +86,15 @@
 		D991D91C13A1D7F30045552F /* HTTPFileUploadSample */ = {
 			isa = PBXGroup;
 			children = (
+				D991D93613A1D8E20045552F /* HTTPFileUpload.h */,
+				D991D93713A1D8E20045552F /* HTTPFileUpload.m */,
 				D991D92513A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.h */,
 				D991D92613A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.m */,
 				D991D92813A1D7F30045552F /* MainWindow.xib */,
 				D991D92B13A1D7F30045552F /* HTTPFileUploadSampleViewController.h */,
 				D991D92C13A1D7F30045552F /* HTTPFileUploadSampleViewController.m */,
 				D991D92E13A1D7F30045552F /* HTTPFileUploadSampleViewController.xib */,
+				D991D94913A1DE460045552F /* Resources */,
 				D991D91D13A1D7F30045552F /* Supporting Files */,
 			);
 			path = HTTPFileUploadSample;
@@ -99,6 +109,15 @@
 				D991D92313A1D7F30045552F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D991D94913A1DE460045552F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D991D94C13A1DEEC0045552F /* Icon.jpg */,
+				D991D94A13A1DE460045552F /* Icon.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +173,8 @@
 				D991D92113A1D7F30045552F /* InfoPlist.strings in Resources */,
 				D991D92A13A1D7F30045552F /* MainWindow.xib in Resources */,
 				D991D93013A1D7F30045552F /* HTTPFileUploadSampleViewController.xib in Resources */,
+				D991D94B13A1DE460045552F /* Icon.png in Resources */,
+				D991D94D13A1DEEC0045552F /* Icon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +188,7 @@
 				D991D92413A1D7F30045552F /* main.m in Sources */,
 				D991D92713A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.m in Sources */,
 				D991D92D13A1D7F30045552F /* HTTPFileUploadSampleViewController.m in Sources */,
+				D991D93813A1D8E20045552F /* HTTPFileUpload.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
