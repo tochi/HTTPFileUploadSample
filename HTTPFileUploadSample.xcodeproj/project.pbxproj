@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D991D91713A1D7F30045552F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D991D91613A1D7F30045552F /* UIKit.framework */; };
+		D991D91913A1D7F30045552F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D991D91813A1D7F30045552F /* Foundation.framework */; };
+		D991D91B13A1D7F30045552F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D991D91A13A1D7F30045552F /* CoreGraphics.framework */; };
+		D991D92113A1D7F30045552F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D991D91F13A1D7F30045552F /* InfoPlist.strings */; };
+		D991D92413A1D7F30045552F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D991D92313A1D7F30045552F /* main.m */; };
+		D991D92713A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D991D92613A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.m */; };
+		D991D92A13A1D7F30045552F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D991D92813A1D7F30045552F /* MainWindow.xib */; };
+		D991D92D13A1D7F30045552F /* HTTPFileUploadSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D991D92C13A1D7F30045552F /* HTTPFileUploadSampleViewController.m */; };
+		D991D93013A1D7F30045552F /* HTTPFileUploadSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D991D92E13A1D7F30045552F /* HTTPFileUploadSampleViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D991D91213A1D7F30045552F /* HTTPFileUploadSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPFileUploadSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D991D91613A1D7F30045552F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D991D91813A1D7F30045552F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D991D91A13A1D7F30045552F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D991D91E13A1D7F30045552F /* HTTPFileUploadSample-Info.plist */ = {isa = PBXFileReference; path = "HTTPFileUploadSample-Info.plist"; sourceTree = "<group>"; };
+		D991D92013A1D7F30045552F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D991D92213A1D7F30045552F /* HTTPFileUploadSample-Prefix.pch */ = {isa = PBXFileReference; path = "HTTPFileUploadSample-Prefix.pch"; sourceTree = "<group>"; };
+		D991D92313A1D7F30045552F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D991D92513A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.h */ = {isa = PBXFileReference; path = HTTPFileUploadSampleAppDelegate.h; sourceTree = "<group>"; };
+		D991D92613A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPFileUploadSampleAppDelegate.m; sourceTree = "<group>"; };
+		D991D92913A1D7F30045552F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		D991D92B13A1D7F30045552F /* HTTPFileUploadSampleViewController.h */ = {isa = PBXFileReference; path = HTTPFileUploadSampleViewController.h; sourceTree = "<group>"; };
+		D991D92C13A1D7F30045552F /* HTTPFileUploadSampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPFileUploadSampleViewController.m; sourceTree = "<group>"; };
+		D991D92F13A1D7F30045552F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HTTPFileUploadSampleViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D991D90F13A1D7F30045552F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D991D91713A1D7F30045552F /* UIKit.framework in Frameworks */,
+				D991D91913A1D7F30045552F /* Foundation.framework in Frameworks */,
+				D991D91B13A1D7F30045552F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D991D90713A1D7F30045552F = {
+			isa = PBXGroup;
+			children = (
+				D991D91C13A1D7F30045552F /* HTTPFileUploadSample */,
+				D991D91513A1D7F30045552F /* Frameworks */,
+				D991D91313A1D7F30045552F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D991D91313A1D7F30045552F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D991D91213A1D7F30045552F /* HTTPFileUploadSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D991D91513A1D7F30045552F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D991D91613A1D7F30045552F /* UIKit.framework */,
+				D991D91813A1D7F30045552F /* Foundation.framework */,
+				D991D91A13A1D7F30045552F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D991D91C13A1D7F30045552F /* HTTPFileUploadSample */ = {
+			isa = PBXGroup;
+			children = (
+				D991D92513A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.h */,
+				D991D92613A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.m */,
+				D991D92813A1D7F30045552F /* MainWindow.xib */,
+				D991D92B13A1D7F30045552F /* HTTPFileUploadSampleViewController.h */,
+				D991D92C13A1D7F30045552F /* HTTPFileUploadSampleViewController.m */,
+				D991D92E13A1D7F30045552F /* HTTPFileUploadSampleViewController.xib */,
+				D991D91D13A1D7F30045552F /* Supporting Files */,
+			);
+			path = HTTPFileUploadSample;
+			sourceTree = "<group>";
+		};
+		D991D91D13A1D7F30045552F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D991D91E13A1D7F30045552F /* HTTPFileUploadSample-Info.plist */,
+				D991D91F13A1D7F30045552F /* InfoPlist.strings */,
+				D991D92213A1D7F30045552F /* HTTPFileUploadSample-Prefix.pch */,
+				D991D92313A1D7F30045552F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D991D91113A1D7F30045552F /* HTTPFileUploadSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D991D93313A1D7F30045552F /* Build configuration list for PBXNativeTarget "HTTPFileUploadSample" */;
+			buildPhases = (
+				D991D90E13A1D7F30045552F /* Sources */,
+				D991D90F13A1D7F30045552F /* Frameworks */,
+				D991D91013A1D7F30045552F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTTPFileUploadSample;
+			productName = HTTPFileUploadSample;
+			productReference = D991D91213A1D7F30045552F /* HTTPFileUploadSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D991D90913A1D7F30045552F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "aguuu,Inc.";
+			};
+			buildConfigurationList = D991D90C13A1D7F30045552F /* Build configuration list for PBXProject "HTTPFileUploadSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D991D90713A1D7F30045552F;
+			productRefGroup = D991D91313A1D7F30045552F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D991D91113A1D7F30045552F /* HTTPFileUploadSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D991D91013A1D7F30045552F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D991D92113A1D7F30045552F /* InfoPlist.strings in Resources */,
+				D991D92A13A1D7F30045552F /* MainWindow.xib in Resources */,
+				D991D93013A1D7F30045552F /* HTTPFileUploadSampleViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D991D90E13A1D7F30045552F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D991D92413A1D7F30045552F /* main.m in Sources */,
+				D991D92713A1D7F30045552F /* HTTPFileUploadSampleAppDelegate.m in Sources */,
+				D991D92D13A1D7F30045552F /* HTTPFileUploadSampleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D991D91F13A1D7F30045552F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D991D92013A1D7F30045552F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D991D92813A1D7F30045552F /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D991D92913A1D7F30045552F /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		D991D92E13A1D7F30045552F /* HTTPFileUploadSampleViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D991D92F13A1D7F30045552F /* en */,
+			);
+			name = HTTPFileUploadSampleViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D991D93113A1D7F30045552F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D991D93213A1D7F30045552F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		D991D93413A1D7F30045552F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HTTPFileUploadSample/HTTPFileUploadSample-Prefix.pch";
+				INFOPLIST_FILE = "HTTPFileUploadSample/HTTPFileUploadSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D991D93513A1D7F30045552F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HTTPFileUploadSample/HTTPFileUploadSample-Prefix.pch";
+				INFOPLIST_FILE = "HTTPFileUploadSample/HTTPFileUploadSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D991D90C13A1D7F30045552F /* Build configuration list for PBXProject "HTTPFileUploadSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D991D93113A1D7F30045552F /* Debug */,
+				D991D93213A1D7F30045552F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D991D93313A1D7F30045552F /* Build configuration list for PBXNativeTarget "HTTPFileUploadSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D991D93413A1D7F30045552F /* Debug */,
+				D991D93513A1D7F30045552F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D991D90913A1D7F30045552F /* Project object */;
+}
