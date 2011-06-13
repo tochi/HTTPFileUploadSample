@@ -1,10 +1,14 @@
 //
 //  HTTPFileUpload.m
-//  HTTPFileUploadSample
+//
+//  Version: 1.00
 //
 //  Created by tochi on 11/06/10.
-//  Copyright 2011 aguuu,Inc. All rights reserved.
+//  Copyright 2011 aguuu Inc. All rights reserved.
 //
+//  License: MIT License
+//
+
 
 #import "HTTPFileUpload.h"
 
@@ -17,20 +21,23 @@
 
 
 @implementation HTTPFileUpload
+@synthesize delegate=delegate_;
 
 - (id)init {
   self = [super init];
   if (self) {
-    postStrings = [[NSMutableArray alloc] initWithCapacity:0];
-    postImages = [[NSMutableArray alloc] initWithCapacity:0];
+    postStrings_ = [[NSMutableArray alloc] initWithCapacity:0];
+    postImages_ = [[NSMutableArray alloc] initWithCapacity:0];
   }
   return self;
 }
 
 - (void)dealloc
 {
-  [postStrings release], postStrings = nil;
-  [postImages release], postImages = nil;
+  delegate_ = nil, [delegate_ release];
+  [postStrings_ release], postStrings_ = nil;
+  [postImages_ release], postImages_ = nil;
+  [resultData_ release], resultData_ = nil;
   
   [super dealloc];
 }
@@ -41,7 +48,7 @@
   NSDictionary *stringDictionary;
   stringDictionary = [NSDictionary dictionaryWithObjectsAndKeys:stringValue, KEY_POST_STRING,
                                                                 postName, KEY_POST_NAME, nil];
-  [postStrings addObject:stringDictionary];
+  [postStrings_ addObject:stringDictionary];
 }
 
 - (void)setPostImage:(UIImage *)image
@@ -52,15 +59,15 @@
   imageDictionary = [NSDictionary dictionaryWithObjectsAndKeys:image, KEY_POST_IMAGE,
                                                                postName, KEY_POST_NAME,
                                                                fileName, KEY_POST_IMAGE_FILE_NAME, nil];
-  [postImages addObject:imageDictionary];
+  [postImages_ addObject:imageDictionary];
 }
 
-- (NSString *)postWithUri:(NSString *)uri
+- (void)postWithUri:(NSString *)uri
 {
 	NSMutableData *postData = [[[NSMutableData alloc] init] autorelease];
   
   // Create string data.
-  for (NSDictionary *stringDictionary in postStrings) {
+  for (NSDictionary *stringDictionary in postStrings_) {
     [postData appendData:[[NSString stringWithFormat:@"--%@\r\n", BOUNDARY] dataUsingEncoding:NSUTF8StringEncoding]];
     [postData appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n",
                                                      [stringDictionary objectForKey:KEY_POST_NAME]] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -73,12 +80,12 @@
   NSRegularExpression *regExp;
   NSTextCheckingResult *match;
   NSError *error = nil;
-  regExp = [NSRegularExpression regularExpressionWithPattern:@"(jpg|jpeg)$"
+  regExp = [NSRegularExpression regularExpressionWithPattern:@"[.](?:jpg|jpeg)$"
                                                      options:NSRegularExpressionCaseInsensitive
                                                        error:&error];
   NSData *imageData;
   NSString *contentType;
-  for (NSDictionary *imageDictionary in postImages) {
+  for (NSDictionary *imageDictionary in postImages_) {
     match = [regExp firstMatchInString:[imageDictionary objectForKey:KEY_POST_IMAGE_FILE_NAME]
                                options:0
                                  range:NSMakeRange(0, [[imageDictionary objectForKey:KEY_POST_IMAGE_FILE_NAME] length])];
@@ -112,11 +119,41 @@
 	[request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@", BOUNDARY] forHTTPHeaderField:@"Content-Type"];
 	[request setHTTPBody:postData];
 
-	NSURLResponse *response;
-  error = nil;
-	NSData *resultData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-  NSString *result = [[[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding] autorelease];
-  
-  return result;
+  [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+  resultData_ = [[NSMutableData alloc] initWithCapacity:0];
+  [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
 }
+
+
+#pragma mark - NSURLConnection delegate.
+- (void)connection:(NSURLConnection *)connection
+  didFailWithError:(NSError *)error
+{
+  if ([delegate_ respondsToSelector:@selector(httpFileUpload:didFailWithError:)]) {
+    [delegate_ httpFileUpload:connection didFailWithError:error];
+  }
+  
+  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+  [resultData_ release], resultData_ = nil;
+  [connection cancel];
+}
+
+- (void)connection:(NSURLConnection *)connection
+    didReceiveData:(NSData *)data
+{
+  [resultData_ appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+  NSString *result = [[[NSString alloc] initWithData:resultData_ encoding:NSUTF8StringEncoding] autorelease];
+  if ([delegate_ respondsToSelector:@selector(httpFileUploadDidFinishLoading:result:)]) {
+    [delegate_ httpFileUploadDidFinishLoading:connection result:result];
+  }
+  
+  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+  [resultData_ release], resultData_ = nil;
+  [connection cancel];
+}
+
 @end
