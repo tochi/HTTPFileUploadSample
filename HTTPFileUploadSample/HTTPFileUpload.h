@@ -1,7 +1,7 @@
 //
 //  HTTPFileUpload.h
 //
-//  Version: 1.00
+//  Version: 1.01
 //
 //  Created by tochi on 11/06/10.
 //  Copyright 2011 aguuu Inc. All rights reserved.
@@ -16,11 +16,11 @@
 @interface HTTPFileUpload : NSObject
 {
  @private
-  id delegate_;
+  id <HTTPFileUploadDelegate> delegate_;
   NSMutableArray *postStrings_, *postImages_;
   NSMutableData *resultData_;
 }
-@property (nonatomic, assign) id <HTTPFileUploadDelegate> delegate;
+@property(nonatomic, assign) id<HTTPFileUploadDelegate> delegate;
 
 - (void)setPostString:(NSString *)stringValue withPostName:(NSString *)postName;
 - (void)setPostImage:(UIImage *)image withPostName:(NSString *)postName fileName:(NSString *)fileName;

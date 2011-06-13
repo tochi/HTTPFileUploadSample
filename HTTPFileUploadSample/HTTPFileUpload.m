@@ -1,7 +1,7 @@
 //
 //  HTTPFileUpload.m
 //
-//  Version: 1.00
+//  Version: 1.01
 //
 //  Created by tochi on 11/06/10.
 //  Copyright 2011 aguuu Inc. All rights reserved.
