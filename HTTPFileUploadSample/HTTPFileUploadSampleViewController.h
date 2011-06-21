@@ -11,7 +11,6 @@
 
 @interface HTTPFileUploadSampleViewController : UIViewController <HTTPFileUploadDelegate>
 {
- @private
 }
 
 - (IBAction)postButtonClicked:(id)sender;

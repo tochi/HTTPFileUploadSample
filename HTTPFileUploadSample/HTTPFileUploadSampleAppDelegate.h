@@ -10,12 +10,10 @@
 
 @class HTTPFileUploadSampleViewController;
 
-@interface HTTPFileUploadSampleAppDelegate : NSObject <UIApplicationDelegate> {
-
+@interface HTTPFileUploadSampleAppDelegate : NSObject <UIApplicationDelegate>
+{
 }
-
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
 @property (nonatomic, retain) IBOutlet HTTPFileUploadSampleViewController *viewController;
 
 @end

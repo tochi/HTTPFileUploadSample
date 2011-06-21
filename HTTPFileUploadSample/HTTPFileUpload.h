@@ -20,7 +20,7 @@
   NSMutableArray *postStrings_, *postImages_;
   NSMutableData *resultData_;
 }
-@property(nonatomic, assign) id<HTTPFileUploadDelegate> delegate;
+@property(nonatomic, assign) id <HTTPFileUploadDelegate> delegate;
 
 - (void)setPostString:(NSString *)stringValue withPostName:(NSString *)postName;
 - (void)setPostImage:(UIImage *)image withPostName:(NSString *)postName fileName:(NSString *)fileName;
