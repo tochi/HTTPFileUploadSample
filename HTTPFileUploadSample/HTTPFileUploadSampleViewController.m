@@ -48,8 +48,7 @@
   [httpFileUpload setPostString:@"1234" withPostName:@"password"];
   [httpFileUpload setPostImage:image1 withPostName:@"data1" fileName:@"Icon.png"];
   [httpFileUpload setPostImage:image2 withPostName:@"data2" fileName:@"Icon.jpeg"];
-  #pragma mark TODO: Change sample uri.
-  [httpFileUpload postWithUri:@"http://photopost.jp/posts/create.json"];
+  [httpFileUpload postWithUri:@"http://xxx.localhost/"];
   [httpFileUpload release], httpFileUpload = nil;
 }
 
